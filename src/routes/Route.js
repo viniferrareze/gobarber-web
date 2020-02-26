@@ -6,7 +6,7 @@ import { Route, Redirect } from 'react-router-dom';
 import AuthLayout from '../pages/_layouts/auth';
 import DefaultLayout from '../pages/_layouts/default';
 
-import store from '../redux';
+import { store } from '../redux';
 
 export default function RouteWrapper({
    component: Component,

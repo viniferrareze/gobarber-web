@@ -1,7 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
+
+import { signUpRequest } from '../../redux/modules/auth/actions';
 
 import logo from '../../assets/logo.svg';
 
@@ -16,8 +19,12 @@ const schema = Yup.object().shape({
 });
 
 export default function SignUp() {
+   const dispatch = useDispatch();
+
    function handleSubmit(data) {
-      console.log(data);
+      const { name, email, password } = data;
+
+      dispatch(signUpRequest(name, email, password));
    }
 
    return (

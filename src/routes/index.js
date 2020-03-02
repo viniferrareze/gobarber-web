@@ -13,7 +13,7 @@ export default function Routes() {
          <Route path="/" exact component={SignIn} />
          <Route path="/register" component={SignUp} />
          <Route path="/dashboard" component={Dashboard} isPrivate />
-         <Route path="/perfile" component={Profile} isPrivate />
+         <Route path="/profile" component={Profile} isPrivate />
 
          <Route path="*" component={() => <h1>Rota não existe 404</h1>} />
       </Switch>
